@@ -1,0 +1,291 @@
+.facilities-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    grid-column: 1 / -1;
+    /* Try to span full width if in grid */
+    width: 100%;
+}
+
+.facility-card {
+    background-color: var(--color-panel-dark);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.facility-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.facility-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.facility-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--color-accent);
+    /* Use accent color for icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facility-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-text-light);
+}
+
+.facility-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+    margin: 0.25rem 0 0 0;
+}
+
+.facility-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.facility-status-badge.active {
+    color: #4ade80;
+    /* Green */
+    background-color: rgba(74, 222, 128, 0.1);
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+/* Balance Section */
+.facility-balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.facility-label {
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+    margin: 0 0 0.5rem 0;
+}
+
+.facility-amount {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--color-text-light);
+    letter-spacing: -0.02em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Progress Bar */
+.facility-progress-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    width: 300px;
+    /* Fixed width or max-width */
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.facility-progress-bar {
+    height: 100%;
+    background-color: #3b82f6;
+    /* Bright Blue like photo */
+    border-radius: 4px;
+}
+
+.remaining-text {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    margin: 0;
+}
+
+.due-status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.due-status.success {
+    color: #4ade80;
+}
+
+.due-status.warning {
+    color: var(--color-accent);
+}
+
+/* Details Grid */
+.facility-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.facility-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-text-dim);
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.facility-detail-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.detail-sub {
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+    margin-left: 0.4rem;
+    font-weight: 400;
+}
+
+/* Footer & Buttons */
+.facility-footer {
+    display: flex;
+    justify-content: flex-end;
+    /* Buttons to the right */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.view-transactions-btn {
+    background: transparent;
+    color: var(--color-text-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    transition: color 0.2s;
+}
+
+.view-transactions-btn:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+
+.make-payment-btn {
+    background-color: #3b82f6;
+    /* Blue button */
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.make-payment-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 640px) {
+    .facility-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablet */
+    }
+
+    /* Keep balance section split if screen is wide enough (e.g. tablet), stack only on mobile */
+    .facility-balance-section {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .balance-right {
+        align-items: flex-end;
+        width: auto;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+}
+
+@media (max-width: 640px) {
+    .facility-balance-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .balance-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-right {
+        text-align: left;
+    }
+
+    .due-status {
+        justify-content: flex-start;
+    }
+
+    .facility-details-grid {
+        grid-template-columns: 1fr;
+        /* Single column for mobile */
+    }
+
+    .facility-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .make-payment-btn,
+    .view-transactions-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

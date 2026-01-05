@@ -1,0 +1,69 @@
+.layout-container {
+    display: flex;
+    height: 100vh;
+    /* Changed from min-height to height */
+    overflow: hidden;
+    /* Prevent body scroll, force inner scroll */
+    background-color: var(--color-bg-dark);
+    color: white;
+}
+
+/* Mobile: Hide Sidebar, No Overlay needed */
+.sidebar-overlay {
+    display: none;
+}
+
+.sidebar-container {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .sidebar-overlay {
+        display: none;
+    }
+
+    .sidebar-container {
+        display: block;
+    }
+}
+
+.main-content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition: all 0.3s;
+    height: 100%;
+    /* Ensure it takes full height */
+    overflow: hidden;
+    /* Ensure header stays put if we want */
+}
+
+/* If header is NOT fixed inside main-content-area, then it scrolls with it. 
+   But "header need fix" suggests it should not scroll. 
+   Structure: 
+   MainContentArea (flex col)
+      Header (block)
+      MainContent (flex 1, overflow auto)
+   
+   This structure ALREADY does what is expected: Header stays at top, MainContent takes rest and scrolls.
+*/
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    /* Enable page scroll */
+}
+
+@media (min-width: 1025px) {
+    .main-content {
+        padding: 2rem;
+    }
+}
+
+.content-wrapper {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,100 @@
+.mobile-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* My Accounts Card - Spans full width */
+.account-toggle-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+    color: white;
+}
+
+.mobile-nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 100px;
+}
+
+.mobile-nav-card:active {
+    transform: scale(0.98);
+}
+
+.mobile-nav-icon {
+    margin-bottom: 0.5rem;
+    width: 28px;
+    height: 28px;
+}
+
+.mobile-nav-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.account-toggle-card .mobile-nav-title {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.mobile-nav-subtitle {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.25rem;
+}
+
+/* Icon Colors */
+.icon-blue {
+    color: #448AFF;
+    background-color: #E3F2FD;
+    padding: 6px;
+    border-radius: 8px;
+    box-sizing: content-box;
+}
+
+.icon-purple {
+    color: #AB47BC;
+    background-color: #F3E5F5;
+    padding: 6px;
+    border-radius: 8px;
+    box-sizing: content-box;
+}
+
+.icon-green {
+    color: #66BB6A;
+    background-color: #E8F5E9;
+    padding: 6px;
+    border-radius: 8px;
+    box-sizing: content-box;
+}
+
+.icon-gray {
+    color: #78909C;
+    background-color: #ECEFF1;
+    padding: 6px;
+    border-radius: 8px;
+    box-sizing: content-box;
+}
+
+.account-toggle-card .mobile-nav-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+@media (min-width: 1280px) {
+    .mobile-nav-grid {
+        display: none;
+    }
+}
