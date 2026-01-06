@@ -8,12 +8,7 @@ const Header = ({ toggleSidebar }) => {
     return (
         <header className="header-container">
             {/* Mobile Menu Button - REMOVED for new design */}
-            {/* <button
-                className="mobile-menu-btn"
-                onClick={toggleSidebar}
-            >
-                <Menu size={24} />
-            </button> */}
+
 
             {/* Brand / Logo Area */}
             <div className="mobile-brand">

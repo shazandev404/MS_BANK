@@ -17,25 +17,7 @@
     }
 }
 
-.mobile-menu-btn {
-    display: block;
-    padding: 0.5rem;
-    color: white;
-    border-radius: 0.5rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
 
-.mobile-menu-btn:hover {
-    background-color: var(--color-primary-dark);
-}
-
-@media (min-width: 1280px) {
-    .mobile-menu-btn {
-        display: none;
-    }
-}
 
 .mobile-brand {
     display: block;

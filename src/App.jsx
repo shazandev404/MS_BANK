@@ -11,11 +11,11 @@ import InternalTransfer from './pages/InternalTransfer'
 import OtherBankTransfer from './pages/OtherBankTransfer'
 import BillPayments from './pages/BillPayments'
 import OtherServices from './pages/OtherServices'
-import './App.css'
+
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<MyAccount />} />
