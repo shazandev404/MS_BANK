@@ -1,6 +1,5 @@
-
 import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import MyAccount from './pages/MyAccount'
 import MyFacilities from './pages/MyFacilities'
@@ -15,7 +14,7 @@ import OtherServices from './pages/OtherServices'
 
 function App() {
     return (
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<MyAccount />} />
@@ -32,7 +31,7 @@ function App() {
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
