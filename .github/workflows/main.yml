@@ -7,6 +7,11 @@ on:
   pull_request:
     branches:
       - master
+      permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 
 jobs:
   build:
@@ -29,9 +34,12 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: './dist'
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v2
+
