@@ -2,6 +2,7 @@
   "name": "bankapp",
   "version": "1.0.0",
   "description": "MS Bank Website",
+  "homepage": "https://shazandev404.github.io/MS_BANK/",
   "main": "index.js",
   "type": "module",
   "scripts": {
