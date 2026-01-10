@@ -33,7 +33,18 @@ jobs:
         run: npm ci
 
       - name: Build
+    env:
+      NODE_ENV: production
         run: npm run build
+            - name: Verify Build Output
+      run: |
+        if [ -d "dist" ]; then
+          echo "✓ Build successful: dist folder exists"
+          ls -la dist/
+        else
+          echo "✗ Build failed: dist folder not found"
+          exit 1
+        fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
