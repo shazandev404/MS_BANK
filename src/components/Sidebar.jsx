@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                             <User size={40} className="sidebar-avatar-icon" />
                         </div>
                     </div>
-                    <h2 className="sidebar-name">Hello, Lucifer</h2>
+                    <h2 className="sidebar-name">Hello, John</h2>
                     <p className="sidebar-profile-link">View Profile</p>
                 </div>
 

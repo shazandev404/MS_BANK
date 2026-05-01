@@ -47,7 +47,7 @@ const MyAccount = () => {
                 )}
                 <h1 className="my-account-title mb-0">
                     {isMobile && mobileView === 'dashboard' ? `Welcome Back` : (mobileView === 'cards' ? 'My Cards' : 'My Accounts')}
-                    {isMobile && mobileView === 'dashboard' && <span className="mobile-subtitle">Lucifer Morningstar</span>}
+                    {isMobile && mobileView === 'dashboard' && <span className="mobile-subtitle">John</span>}
                 </h1>
             </div>
 
