@@ -1,0 +1,283 @@
+.card-section-container {
+    background-color: var(--color-panel-dark);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    border: 1px solid var(--color-primary-dark);
+}
+
+.card-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-collapsible-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.card-collapsible-wrapper.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.card-collapsible-wrapper.expanded {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.card-section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-info-icon {
+    color: var(--color-text-dim);
+    cursor: pointer;
+}
+
+/* Card Visual */
+.card-visual-container {
+    position: relative;
+    height: 12rem;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
+    padding: 1.25rem;
+    color: white;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+        0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--color-secondary);
+}
+
+@media (max-width: 1024px) {
+    .card-visual-container {
+        height: auto;
+        min-height: 10rem;
+    }
+}
+
+.card-visual-glow {
+    position: absolute;
+    top: -2.5rem;
+    right: -2.5rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+}
+
+.card-visual-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-chip-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-chip {
+    width: 3rem;
+    height: 2rem;
+    background-color: #fde68a;
+    border-radius: 0.375rem;
+    opacity: 0.8;
+}
+
+.card-brand-icon {
+    opacity: 0.8;
+}
+
+.card-number-area {
+    margin-top: 1rem;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.card-number-value {
+    font-family: monospace;
+    font-size: 1.125rem;
+    letter-spacing: 0.15em;
+}
+
+.card-details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-expires-section {
+    text-align: right;
+}
+
+.card-detail-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Controls */
+.card-controls-container {
+    background-color: var(--color-bg-dark);
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    border: 1px solid var(--color-primary-dark);
+}
+
+.card-control-btn {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-dim);
+}
+
+.card-control-btn-active {
+    background-color: var(--color-accent);
+    color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-control-btn-inactive:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Content Area */
+.card-content-area {
+    background-color: var(--color-panel-dark);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    padding-top: 0.5rem;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.limit-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.limit-label {
+    color: var(--color-text-dim);
+}
+
+.limit-value {
+    font-weight: 700;
+    color: white;
+}
+
+.progress-bar-bg {
+    height: 0.5rem;
+    background-color: var(--color-bg-dark);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+}
+
+.fill-online {
+    background-color: var(--color-accent);
+}
+
+.fill-atm {
+    background-color: var(--color-primary);
+}
+
+/* Linked Account */
+.linked-account-anim {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.linked-account-box {
+    background-color: var(--color-bg-dark);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-primary-dark);
+}
+
+.linked-label {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.linked-row,
+.linked-row-last {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linked-row {
+    margin-bottom: 1rem;
+}
+
+.linked-name {
+    font-weight: 500;
+    color: white;
+}
+
+.linked-number {
+    font-family: monospace;
+    color: white;
+}
+
+.linked-text-sm {
+    font-size: 0.875rem;
+    color: var(--color-text-dim);
+}

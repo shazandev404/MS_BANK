@@ -1,0 +1,501 @@
+/* OtherBankTransfer.css */
+
+.other-transfer-container {
+    padding: 1rem 0;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.other-transfer-header {
+    margin-bottom: 2.5rem;
+}
+
+.other-transfer-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.other-transfer-subtitle {
+    color: var(--color-text-dim);
+    font-size: 1rem;
+}
+
+.other-transfer-form {
+    background-color: var(--color-panel-dark);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.section-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.section-label-row.small-margin {
+    margin-bottom: 0.5rem;
+}
+
+.section-icon {
+    color: var(--color-primary);
+}
+
+.section-label-row label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Recipient Toggle */
+.recipient-toggle {
+    display: flex;
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--color-primary-dark);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    border: none;
+    background: transparent;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggle-btn.active {
+    background-color: var(--color-accent);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Favorite Selection Dropdown & Card Style */
+.dropdown-beneficiary-card {
+    background: var(--color-bg-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.dropdown-beneficiary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-accent);
+}
+
+.beneficiary-selected-card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--color-accent);
+}
+
+.beneficiary-selected-card .account-card-header {
+    background-color: rgba(255, 152, 0, 0.2);
+}
+
+.beneficiary-selected-card .account-card-body {
+    background-color: rgba(0, 77, 64, 0.6);
+}
+
+.beneficiary-selected-card .account-label,
+.beneficiary-selected-card .balance-label {
+    color: var(--color-text-dim);
+}
+
+.beneficiary-selected-card .account-number-large,
+.beneficiary-selected-card .balance-amount {
+    color: white;
+}
+
+.beneficiary-selected-card .balance-divider {
+    background-color: var(--color-primary-dark);
+}
+
+/* Manual Entry Grid */
+.manual-entry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.manual-entry-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.bank-select-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.bank-select-input option {
+    background-color: var(--color-panel-dark);
+    color: white;
+}
+
+/* Two column layout for amount/ref */
+.transfer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--color-accent);
+}
+
+.currency-symbol {
+    color: var(--color-text-dim);
+    margin-right: 0.75rem;
+    font-weight: 500;
+}
+
+.amount-input,
+.reference-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+.amount-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quick-amounts {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.quick-amount-btn {
+    padding: 0.4rem 0.75rem;
+    background-color: var(--color-bg-dark);
+    border: 1px solid var(--color-primary-dark);
+    color: var(--color-text-dim);
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-amount-btn:hover {
+    border-color: var(--color-accent);
+    color: white;
+    background-color: var(--color-primary-dark);
+}
+
+.field-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: var(--color-primary-dark);
+    margin: 2.5rem 0;
+}
+
+/* Standardized Footer Section */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-primary-dark);
+}
+
+.back-btn,
+.save-btn,
+.next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.back-btn {
+    background: #0f172a;
+    border: 1px solid var(--color-primary-dark);
+    color: var(--color-text-dim);
+}
+
+.back-btn:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.save-btn {
+    background-color: var(--color-bg-dark);
+    color: white;
+    border: 1px solid var(--color-primary-dark);
+}
+
+.save-btn:hover {
+    background-color: var(--color-panel-dark);
+    border-color: var(--color-accent);
+}
+
+.next-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.next-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Account Card Styles */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-trigger {
+    width: 100%;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dim);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dropdown-trigger:hover {
+    border-color: var(--color-accent);
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background-color: var(--color-panel-dark);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 0.75rem;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 50;
+    padding: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-account-card {
+    background: var(--color-bg-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.dropdown-account-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-accent);
+}
+
+.dropdown-card-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: 0.6rem 1.25rem;
+}
+
+.dropdown-card-title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.dropdown-card-body {
+    padding: 1rem 1.25rem;
+}
+
+.dropdown-account-label {
+    font-size: 0.75rem;
+    color: var(--color-text-dark);
+    opacity: 0.8;
+    margin: 0 0 0.2rem 0;
+}
+
+.dropdown-account-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 0.75rem 0;
+}
+
+.dropdown-balance-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-balance-amount {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.dropdown-balance-label {
+    font-size: 0.7rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.account-card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.account-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.account-title {
+    font-weight: 600;
+    color: white;
+}
+
+.change-account-btn {
+    font-size: 0.8rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.account-card-body {
+    padding: 1.5rem;
+    background-color: var(--color-bg-light);
+}
+
+.account-label {
+    font-size: 0.8rem;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin: 0 0 0.3rem 0;
+}
+
+.account-number-large {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 1.25rem 0;
+}
+
+.balance-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.balance-item {
+    flex: 1;
+}
+
+.balance-amount {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin: 0 0 0.25rem 0;
+}
+
+.balance-label {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.balance-divider {
+    width: 1px;
+    height: 3rem;
+    background-color: var(--color-secondary);
+}
+
+@media (max-width: 1024px) {
+
+    .manual-entry-row,
+    .transfer-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-footer {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .back-btn,
+    .save-btn,
+    .next-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

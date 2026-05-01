@@ -1,0 +1,168 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    width: 16rem;
+    background-color: var(--color-panel-dark);
+    color: white;
+    transform: translateX(-100%);
+    /* Default hidden on mobile */
+    transition: transform 0.3s ease-in-out;
+    border-right: 1px solid var(--color-primary-dark);
+}
+
+/* Helper to handle the open state class toggling */
+.sidebar.translate-x-0 {
+    transform: translateX(0);
+}
+
+.sidebar.-translate-x-full {
+    transform: translateX(-100%);
+}
+
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar-profile {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-primary-dark);
+}
+
+.sidebar-avatar-container {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem auto;
+    background-color: var(--color-bg-dark);
+    border-radius: 9999px;
+    overflow: hidden;
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.sidebar-avatar-container:hover {
+    opacity: 0.9;
+}
+
+.sidebar-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-panel-dark);
+}
+
+.sidebar-avatar-icon {
+    color: var(--color-text-dim);
+}
+
+.sidebar-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.sidebar-profile-link {
+    font-size: 0.875rem;
+    color: var(--color-text-dim);
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.sidebar-profile-link:hover {
+    color: white;
+}
+
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 1rem;
+    padding-bottom: 145%;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0 0.75rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.sidebar-nav-item-active {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.sidebar-nav-item-inactive {
+    color: var(--color-text-dim);
+}
+
+.sidebar-nav-item-inactive:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.sidebar-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.sidebar-item-text {
+    font-weight: 500;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid var(--color-primary-dark);
+}
+
+.logout-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: white;
+    background-color: var(--color-primary-dark);
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+    background-color: var(--color-primary);
+}
+
+/* Specificity override for desktop: placed at the end */
+@media (min-width: 1280px) {
+
+    .sidebar,
+    .sidebar.-translate-x-full {
+        transform: translateX(0);
+        /* Always visible on desktop */
+        position: static;
+        /* Or layout handled by parent flex */
+        /* If parent is flex, static might work, but original was md:static md:inset-auto */
+    }
+}
