@@ -6,17 +6,17 @@ import MobileNavGrid from '../components/dashboard/MobileNavGrid'
 import './MyAccount.css'
 
 const MyAccount = () => {
-    // State for mobile view navigation ('dashboard' or 'accounts')
-    const [mobileView, setMobileView] = useState('dashboard');
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
+    // State for mobile view navigation ('dashboard', 'accounts', or 'cards')
+    const [mobileView, setMobileView] = useState('dashboard')
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1025)
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 1025);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+            setIsMobile(window.innerWidth < 1025)
+        }
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     const openAccounts = () => {
         setMobileView('accounts');
@@ -33,14 +33,8 @@ const MyAccount = () => {
     return (
         <div className="my-account-container">
             {/* Header */}
-            {/* Header */}
             <div className="flex items-center gap-2 mb-6">
-                {isMobile && mobileView === 'accounts' && (
-                    <button onClick={backToDashboard} className="text-gray-400 hover:text-white">
-                        <ArrowLeft size={24} />
-                    </button>
-                )}
-                {isMobile && mobileView === 'cards' && (
+                {isMobile && mobileView !== 'dashboard' && (
                     <button onClick={backToDashboard} className="text-gray-400 hover:text-white">
                         <ArrowLeft size={24} />
                     </button>
